@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+<head id='head'>
+
+  <title>Book of Jack</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+  <meta content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport">
+  <meta name="google-site-verification" 	content="2rOMgnamb1F023yDGFaDxAVCWxT1J9EPSjWmfbpsSZw" />
+  
+  <%= favicon_link_tag 'flavicon.png', :type => 'image/png' %>
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag 'application' %>
+
+  <%= csrf_meta_tags %>
+
+  <%= yield(:head) %>
+
+</head>
+
+  <body id="container">
+
+    <header id="banner" class="yui3-g">
+
+      <div id="logo">
+        <img class="yui3-u-1">
+          <% logo = image_tag("title.png", :alt => "Book of Jack", :class => "round") %>
+          <%= link_to logo, root_path %>
+        <img>
+      </div>
+
+      <hgroup id="hgroup">
+        <h1><span>The Book of Jack</span></h1>
+        <h2><span>An entertaining exploration of all things Jack</span></h2>
+      </hgroup> <!-- end hgroup -->
+
+      <nav id="top-nav" class="yui3-u-1 round">
+        <ul class="yui3-u-1">
+          <% if mobile_device? %>
+            <%= link_to "Desktop", :mobile => 0 %>
+          <% else %>
+            <%= link_to "Mobile", :mobile => 1 %>
+          <% end %>
+        </ul>
+      </nav>
+
+      <nav id="top-nav" class="yui3-u-1 round">
+        <ul class="yui3-u-1">
+          <% if user_signed_in? %>
+            Signed in as <%= current_user.email %>. Not you?
+            <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path %>
+            <%= link_to "Sign In", new_user_session_path %>
+          <% end %>
+        </ul>
+      </nav>
+
+      <nav id="top-nav" class="yui3-u-1 round">
+        <ul class="yui3-u-1">
+          <%= link_to "About", about_book_path %>
+          <%= link_to "Map", map_path %>
+          <%= link_to "Contact", contact_path %>
+        </ul>
+      </nav>
+      
+      <nav id="top-nav" class="yui3-u-1 round">
+        <ul class="yui3-u-1">
+          <%= link_to "Browse Articles", root_url %>
+        </ul>
+      </nav>
+
+      <nav id="top-nav" class="yui3-u-1 round">
+        <ul class="yui3-u-1">
+        <form action="http://localhost:3000/search" id="cse-search-box">
+          <input type="hidden" name="cx" value="005048045462197865618:zox2hpboky4" />
+          <input type="hidden" name="cof" value="FORID:11;NB:1" />
+          <input type="hidden" name="ie" value="UTF-8" />
+          <input type="text" name="q" size="31" />
+          <input type="submit" name="sa" value="Go!" />
+        </form>
+        <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&#38;lang=en"></script>
+      </nav>
+
+    </header>
+
+    <% flash.each do |key, value| %>
+      <div class='flash yui3-u-1 round' id='<%= key %>'>
+        <%= value %>
+      </div>
+    <% end %>
+    
+    <%= yield %>
+
+    <footer id='footer' class='yui3-g round'>
+      <ul class='yui3-u-1'>
+        <small class='copyright'>
+          Copyright &copy; <%= Date.today.year %> All rights reserved.
+        </small>
+      </ul>
+    </footer>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-20439293-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+      </script>
+      <!-- End Google Analytics -->
+
+  </body>
+</html>
