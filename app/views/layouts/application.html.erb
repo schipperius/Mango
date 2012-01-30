@@ -3,16 +3,15 @@
 
 <head id='head'>
 
-  <title>Book of Jack</title>
+  <title><%= title %></title>
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
   <meta content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport">
   <meta name="google-site-verification" 	content="2rOMgnamb1F023yDGFaDxAVCWxT1J9EPSjWmfbpsSZw" />
   
-  <%= favicon_link_tag 'flavicon.png', :type => 'image/png' %>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag 'application' %>
-  <%= javascript_include_tag 'application' %>
 
   <%= csrf_meta_tags %>
 
@@ -24,12 +23,9 @@
 
     <header id="banner" class="yui3-g">
 
-      <div id="logo">
-        <img class="yui3-u-1">
-          <% logo = image_tag("title.png", :alt => "Book of Jack", :class => "round") %>
-          <%= link_to logo, root_path %>
-        <img>
-      </div>
+      <img id="logo" class="yui3-u-1">
+        <%= link_to logo, root_path %>
+      <img>
 
       <hgroup id="hgroup">
         <h1><span>The Book of Jack</span></h1>
@@ -81,7 +77,6 @@
           <input type="text" name="q" size="31" />
           <input type="submit" name="sa" value="Go!" />
         </form>
-        <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&#38;lang=en"></script>
       </nav>
 
     </header>
@@ -92,7 +87,9 @@
       </div>
     <% end %>
     
-    <%= yield %>
+    <div id="main" role="main">
+    <%= yield()%>
+    </div>
 
     <footer id='footer' class='yui3-g round'>
       <ul class='yui3-u-1'>
@@ -102,19 +99,8 @@
       </ul>
     </footer>
 
-    <!-- Google Analytics -->
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-20439293-1']);
-    _gaq.push(['_trackPageview']);
+    <!-- JavaScript at the bottom for fast page loading -->
+    <%= render 'layouts/javascripts' %>
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-      </script>
-      <!-- End Google Analytics -->
-
-  </body>
+  </body><!--! end of #container -->
 </html>
