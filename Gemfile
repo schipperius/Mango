@@ -3,6 +3,7 @@ source 'http://rubygems.org'
   gem 'rails', '3.1.3'
   gem 'jquery-rails', '1.0.18'
   gem "devise", "~> 1.5.3"
+  gem "will_paginate", "~> 3.0.3"
   gem 'RedCloth', :require => 'redcloth'
   
 group :development, :test do
@@ -29,6 +30,7 @@ group :test do
   gem 'guard-spork'
   gem "rb-fsevent"
   gem "webrat"
+  gem "faker", "~> 1.0.1"
 end
 
 group :production do

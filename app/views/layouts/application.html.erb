@@ -46,9 +46,9 @@
         <ul class="yui3-u-1">
           <% if user_signed_in? %>
             Signed in as <%= current_user.email %>. Not you?
-            <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+            <%= link_to "Sign out", destroy_user_session_path, :method => :delete %> |
           <% else %>
-            <%= link_to "Sign up", new_user_registration_path %>
+            <%= link_to "Sign up", new_user_registration_path %> |
             <%= link_to "Sign In", new_user_session_path %>
           <% end %>
         </ul>
@@ -56,15 +56,10 @@
 
       <nav id="top-nav" class="yui3-u-1 round">
         <ul class="yui3-u-1">
-          <%= link_to "About", about_book_path %>
-          <%= link_to "Map", map_path %>
+          <%= link_to "Browse Articles", root_url %> |
+          <%= link_to "Mapping Jack", map_path %> |
+          <%= link_to "About", about_book_path %> |
           <%= link_to "Contact", contact_path %>
-        </ul>
-      </nav>
-      
-      <nav id="top-nav" class="yui3-u-1 round">
-        <ul class="yui3-u-1">
-          <%= link_to "Browse Articles", root_url %>
         </ul>
       </nav>
 

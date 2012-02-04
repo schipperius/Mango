@@ -1,0 +1,105 @@
+/* TYPOGRAPHY */
+
+.first { /* first letter of first paragraph */
+	text-indent: 0;
+	margin: 2em 0;
+}
+
+.a, .b, .c, .d, .e, .f, .g, .h, .i, .j, .k, .l, .m, .n,
+.o, .p, .q, .r, .s, .t, .u, .v, .w, .x, .y, .z {
+	width: 83px;
+	height: 83px;
+	display: block;
+	float: left;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	background-position: top left;
+	margin: -.6em 0em -2em -1em;
+	}
+
+.a {
+	background: url("../images/letters/letter_a.png");
+}
+
+.b {
+	background: url("../images/letters/letter_b.png");
+}
+
+.c {
+	background-image: url("images/letter_c.png");
+}
+.d {
+	background-image: url("images/letter_d.png");
+}
+.e {
+	background: url("letters/letter_e.png");
+}
+.f {
+	background-image: url("images/letter_f.png");
+}
+.g {
+	background-image: url("images/letter_g.png");
+}
+.h {
+	background-image: url("images/letter_h.png");
+}
+.i {
+	background: url("letters/letter_i.png");
+}
+.j {
+	background-image: url("images/letter_j.png");
+}
+.k {
+	background-image: url("images/letter_k.png");
+}
+.l {
+	background-image: url("images/letter_l.png");
+}
+.m {
+	background-image: url("images/letter_m.png");
+}
+.n {
+	background-image: url("images/letter_n.png");
+}
+.o {
+	background-image: url("../images/letter_o.png");
+}
+.p {
+	background-image: url("images/letter_p.png");
+}
+.q {
+	background-image: url("images/letter_q.png");
+}
+.r {
+	background-image: url("images/letter_r.png");
+}
+.s {
+	background-image: url("images/letter_s.png");
+}
+.t {
+	background: url("letters/letter_t.png");
+}
+.u {
+	background: url("../images/letter_u.png");
+}
+.v {
+	background-image: url("images/letter_v.png");
+}
+.w {
+	background: url("letters/letter_w.png");
+}
+.x {
+	background-image: url("images/letter_x.png");
+}
+.y {
+	background-image: url("images/letter_y.png");
+}
+.z {
+	background-image: url("images/letter_z.png");
+}
+
+.firstLine {
+	font-variant: small-caps;
+	font-weight: bold;
+	letter-spacing: .13em;
+}

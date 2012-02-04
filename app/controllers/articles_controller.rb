@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
   def index
-    @articles = Article.all
+    @articles = Article.paginate :page => params[:page], :per_page => 2
 
     respond_to do |format|
       format.html # index.html.erb
@@ -54,7 +54,7 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       if @article.update_attributes(params[:article])
         format.html { redirect_to @article, 
-          notice: 'Successfully created article.' }
+          notice: 'Successfully updated article.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
