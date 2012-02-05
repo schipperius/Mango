@@ -35,15 +35,11 @@
       <nav id="top-nav" class="yui3-u-1 round">
         <ul class="yui3-u-1">
           <% if mobile_device? %>
-            <%= link_to "Desktop", :mobile => 0 %>
+            <%= link_to "Desktop", :mobile => 0 %> |
           <% else %>
-            <%= link_to "Mobile", :mobile => 1 %>
+            <%= link_to "Mobile", :mobile => 1 %> |
           <% end %>
-        </ul>
-      </nav>
 
-      <nav id="top-nav" class="yui3-u-1 round">
-        <ul class="yui3-u-1">
           <% if user_signed_in? %>
             Signed in as <%= current_user.email %>. Not you?
             <%= link_to "Sign out", destroy_user_session_path, :method => :delete %> |
