@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-
   layout 'application'
+  
   helper :all
   before_filter :prepare_for_mobile
   

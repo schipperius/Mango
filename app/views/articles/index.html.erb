@@ -8,34 +8,34 @@
 
     <% @articles.each do |article| %>
 
-    <h2 class="list-title link_to">
-      <%= article.title %>
-    </h2>
+      <h1 class="list-title link_to">
+        <%= article.title %>
+      </h1>
 
-    <img class="yui3-u-1">
-      <%= image_tag(article.image_url, class: 'list_image', 
-        :size => "75x75") %>
-    <img>
+      <img class="yui3-u-1">
+        <%= image_tag(article.image_url, class: 'list_image', 
+          :size => "75x75") %>
+      <img>
 
-    <p class="list_introduction yui3-u-1-2">
-      <%= truncate(strip_tags(article.introduction), 
-        length: 200) %>
-      <%= link_to 'Read', article %>
-    </p>
+      <p class="list_introduction yui3-u-1-2">
+        <%= truncate(strip_tags(article.introduction), 
+          length: 200) %>
+        <%= link_to 'Read', article %>
+      </p>
 
-    <nav class="list_actions">
-      <ul>
-        <%= link_to 'Edit', edit_article_path(article) %>
-        <%= link_to 'Destroy', article, 
-          confirm: 'Are you sure?',
-          method: :delete %>
-      </ul>
-    </nav>
+      <nav class="list_actions">
+        <ul>
+          <%= link_to 'Edit', edit_article_path(article) %>
+          <%= link_to 'Destroy', article, 
+            confirm: 'Are you sure?',
+            method: :delete %>
+        </ul>
+      </nav>
       
     <% end %>
     
     <div class="pagination">
-    <%= will_paginate :previous_label => h("< Previous Page"),  :next_label => h("Next Page >") %>
+    <%= will_paginate :previous_label => h("<< Previous Page"),  :next_label => h("Next Page >>") %>
     </div>
 
   </section>

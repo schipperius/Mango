@@ -7,13 +7,16 @@
  
 */
 
+html {
+
+}
+
 /* to hide h1 and h2 in the header */
 #hgroup span {
 	display: none;
-	} 
+	}
 
 /* the outermost page container with a centered viewport and fixed page width*/
 body #container {
 	}
-	
 
