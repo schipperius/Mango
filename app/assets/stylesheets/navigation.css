@@ -1,0 +1,15 @@
+/* Navigation Global */
+nav {
+  background-color: white;
+  white-space: nowrap;
+	padding: 1em;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+}

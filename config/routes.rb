@@ -1,7 +1,7 @@
 Mango::Application.routes.draw do
 
   resources :articles do
-    resources :comments, :only => :create
+    resources :comments
   end
   
   resources :pages

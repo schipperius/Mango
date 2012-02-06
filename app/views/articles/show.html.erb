@@ -1,56 +1,93 @@
-<article id="main" class="yui3-u-1">
+<article id="main_article" class="yui3-u-1 gutter">
 
   <section id="notice"><%= notice %></section>
 
-  <h1>#<%= @article.position %> <%= @article.title %></h1>
-  <%= link_to 'Edit', edit_article_path(@article) %> |
-  <%= link_to 'Back', articles_path %>
+  <header id="article_heading">
+    <h1>
+      <span class="position">
+        #<%= @article.position %> <%= @article.title %>
+      </span>
+    </h1>
+    
+    <%= link_to 'Edit', edit_article_path(@article) %>
+
+    <h3>Published</h3>
+    <%= @article.published_at.strftime('%b %d, %Y') %>
+    <h3>Updated</h3>
+    <%= @article.updated_at.strftime('%b %d, %Y') %>
+  </header> <!-- end article header -->
+
+  <section id="article_intro" class="yui3-u-1">
+    <p class="first">
+      <%= @article.introduction %>
+    </p>
+
+    <figure id="article_figure" class="figure">
+      <%= image_tag "ruby.png", :alt => 'Ruby' %>
+      <p class="credit">
+        <abbr class="type" title="Some Title">
+          Photograph
+        </abbr>
+          by
+        <cite>
+          <a href="" target="_blank" title="Some Title">
+            Name
+          </a>
+            <sup id="fnref:1.1" class="footnote">
+              <a href="/intro#fn:1.1">
+                1
+              </a>
+            </sup>
+              Sign on Hwy 876. Used with permission.
+        </cite>
+      </p>
+      <p class="caption">
+        <em class="title">
+          Figure 
+        </em>
+          The Barren Canadian Prairies
+      </p>
+    </figure>
+  </section> <!-- end article introduction -->
   
-  <h3>Published</h3>
-  <%= @article.published_at.strftime('%b %d, %Y') %>
-  <h3>Updated</h3>
-  <%= @article.updated_at.strftime('%b %d, %Y') %>
+  <section id="article_desc" class="yui3-u-1">
+    <p><%= @article.description %></p>
+    <h2>Footnotes</h2>
+    <p><%= @article.footnotes %></p>
+    <p><%= @article.comments_count %></p>
+  </section> <!-- end article description -->
 
-  <p class="first"><%= @article.introduction %></p>
-  <%= image_tag "ruby.png", :alt => 'Geneva Bible' %>
-  <p><%= @article.description %></p>
-
-</article>
-
-<article id="main" class="yui3-u-1">
   <nav class="yui3-g round">
     <ul class="yui3-u-1">
-      <%= link_to "Footnotes" %><%= @article.footnotes %> |
-      <%= link_to "Comments" %><%= @article.comments_count %> |
+      <%= link_to "Footnotes" %> |
+      <%= link_to "Comments" %> |
       <%= link_to "Similar Articles" %> |
       <%= link_to "Previous Article" %> |
       <%= link_to "Next Article" %>
     </ul>
   </nav>
+
+  <section id="article_comments">
+    <div id="show_comments">
+      <h3>Comments</h3>
+    </div>
+
+    <div id="post_comments">
+      <h3>Add a Comment</h3>
+      <%= form_for([@article, @article.comments.build]) do |f| %>
+        <div class="field">
+          <%= f.label :name %><br />
+          <%= f.text_field :name %>
+        </div>
+        <div class="field">
+          <%= f.label :content %><br />
+          <%= f.text_area :content, :rows => '4' %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
+    </div>
+  </section> <!-- end article comments -->
+
 </article>
-
-<div id="show_comments">
-  <% if @comments %>
-
-    <h3>Comments</h3>
-
-    <% for comment in @comments do %>
-      <p><strong><%=h(comment.name) %></strong>:</p>
-      <%=h comment.content %>
-    <% end %>
-
-  <% end %>
-</div>
-
-<div id="post_comments">
-  <h3>Post Your Comment</h3>
-  <% form_for([@article, Comment.new]) do |form| %>
-    <p><%= form.label :name %></p>
-    <p><%= form.text_field :name %></p>
-
-    <p><%= form.label :content, 'Comment' %></p>
-    <p><%= form.text_area :content %></p>
-
-    <%= form.submit 'Save' %>
-  <% end %>
-</div>

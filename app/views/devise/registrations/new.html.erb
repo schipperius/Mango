@@ -1,18 +1,25 @@
-<h1>Sign up</h1>
+<article id="main" class="yui3-u-1">
+  <h1>Sign Up</h1>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+    <div><%= f.label :email %><br />
+    <%= f.email_field :email %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+    <br />
+    <div><%= f.label :password %><br />
+    <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+    <br />
+    <div><%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Sign Up" %></div>
-<% end %>
+    <br />
+    <div><%= f.submit "Sign Up" %></div>
+  <% end %>
 
-<%= render :partial => "devise/shared/links" %>
+  <br />
+  <%= render :partial => "devise/shared/links" %>
+
+</article>

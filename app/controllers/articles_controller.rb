@@ -2,30 +2,15 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.paginate :page => params[:page], :per_page => 2
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @articles }
-    end
   end
 
   def show
     @article = Article.find(params[:id])
-    @comment = @article.comments
     @comment = Comment.new(:article => @article)
-    
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @article }
-    end
   end
 
   def new
     @article = Article.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @article }
     end
   end
 
@@ -69,10 +54,5 @@ class ArticlesController < ApplicationController
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
-
-    respond_to do |format|
-      format.html { redirect_to articles_url }
-      format.json { head :ok }
-    end
   end
-end
+

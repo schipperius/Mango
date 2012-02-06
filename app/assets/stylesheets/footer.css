@@ -1,0 +1,13 @@
+footer { /* footer */
+	float: none;
+	text-align: center;
+  margin: 1em auto;
+	padding: 1em 0;
+  background: #fff;
+}
+
+footer ul li {
+  display: inline;
+	list-style-type: none;
+	padding-right: 2em;
+}

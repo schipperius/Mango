@@ -1,22 +1,13 @@
-/***
- * This is a manifest file that will automatically include all the stylesheets available in this directory and any sub-directories.
+/* Copyright (c) 2010, Mark Schipper. All rights reserved. */
+
+/* This is a manifest file that will automatically include all the stylesheets available in this directory and any sub-directories.
  * You are free to add application-wide styles to this file and they will appear at the top of the compiled file, but it's generally better to create a new file per style scope.
 
  *= require_self
  *= require_tree .
- 
-***/
 
-html {
+	*= require yui
+	*= require presentational
+	*= require typography
 
-}
-
-/* to hide h1 and h2 in the header */
-#hgroup span {
-	display: none;
-	}
-
-/* the outermost page container with a centered viewport and fixed page width*/
-body #container {
-	}
-
+*/

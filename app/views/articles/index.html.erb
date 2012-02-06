@@ -4,7 +4,7 @@
   <%= link_to 'New Article', new_article_path %>
   </aside>
   
-  <section>
+  <section class="yui3-u-1 round">
 
     <% @articles.each do |article| %>
 
@@ -34,7 +34,7 @@
       
     <% end %>
     
-    <div class="pagination">
+    <div class="pagination yui3-u-1-2 round">
     <%= will_paginate :previous_label => h("<< Previous Page"),  :next_label => h("Next Page >>") %>
     </div>
 

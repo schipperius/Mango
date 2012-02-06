@@ -1,6 +1,8 @@
-/* TYPOGRAPHY */
+/***
+/* Typographic Styles */
 
-.first { /* first letter of first paragraph */
+/* First letter of first paragraph */
+.first { 
 	text-indent: 0;
 	margin: 2em 0;
 }
@@ -98,6 +100,7 @@
 	background-image: url("images/letter_z.png");
 }
 
+/* First line of introductory paragraph */
 .firstLine {
 	font-variant: small-caps;
 	font-weight: bold;

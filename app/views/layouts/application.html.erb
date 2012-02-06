@@ -23,7 +23,7 @@
 
     <header id="banner" class="yui3-g">
 
-      <img id="logo" class="yui3-u-1">
+      <img id="logo" class="yui3-u-4-5">
         <%= link_to logo, root_path %>
       <img>
 
@@ -32,7 +32,7 @@
         <h2><span>An entertaining exploration of all things Jack</span></h2>
       </hgroup> <!-- end hgroup -->
 
-      <nav id="top-nav" class="yui3-u-1 round">
+      <nav id="primary-nav" class="yui3-u-1-2 round">
         <ul class="yui3-u-1">
           <% if mobile_device? %>
             <%= link_to "Desktop", :mobile => 0 %> |
@@ -50,7 +50,7 @@
         </ul>
       </nav>
 
-      <nav id="top-nav" class="yui3-u-1 round">
+      <nav id="primary-nav" class="yui3-u-1-2 round">
         <ul class="yui3-u-1">
           <%= link_to "About", about_book_path %> |
           <%= link_to "Contents", root_url %> |
@@ -61,7 +61,7 @@
         </ul>
       </nav>
 
-      <nav id="top-nav" class="yui3-u-1 round">
+      <nav id="primary-nav" class="yui3-u-1-2 round">
         <ul class="yui3-u-1">
         <form action="http://localhost:3000/search" id="cse-search-box">
           <input type="hidden" name="cx" value="005048045462197865618:zox2hpboky4" />
@@ -80,11 +80,11 @@
       </div>
     <% end %>
     
-    <div id="main" role="main">
+    <div id="main" role="main" >
     <%= yield()%>
     </div>
 
-    <footer id='footer' class='yui3-g round'>
+    <footer id='footer' class="yui3-u-1 round">
       <ul class='yui3-u-1'>
         <small class='copyright'>
           Copyright &copy; <%= Date.today.year %> All rights reserved.
