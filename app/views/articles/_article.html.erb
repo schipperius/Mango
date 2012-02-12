@@ -1,0 +1,22 @@
+<section id="article_desc" class="yui3-u-1 round">
+  <p><%= @article.description %></p>
+</section> <!-- end article description -->
+
+<section id="article_desc" class="yui3-u-1 round">
+  <div class="yui3-u-11-24 gutter">
+    <p><%= truncate(strip_tags(@article.description), 
+      :length => 1000, :separator => ' ') %>
+    </p>
+  </div>
+  <div class="yui3-u-11-24 gutter">
+    <p><%= truncate(strip_tags(@article.description), 
+      :length => 1000, :separator => ' ') %>
+    </p>
+  </div>
+</section> <!-- end article description -->
+
+
+
+
+
+

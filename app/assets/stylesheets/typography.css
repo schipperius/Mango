@@ -1,10 +1,12 @@
-/***
-/* Typographic Styles */
+/* =============================================================================
+		Typography
+	   ========================================================================== */
 
 /* First letter of first paragraph */
 .first { 
 	text-indent: 0;
-	margin: 2em 0;
+	margin: .5% .5% 2% .5%;
+	padding: .5% .5% 2% .5%;
 }
 
 .a, .b, .c, .d, .e, .f, .g, .h, .i, .j, .k, .l, .m, .n,
@@ -19,86 +21,32 @@
 	margin: -.6em 0em -2em -1em;
 	}
 
-.a {
-	background: url("../images/letters/letter_a.png");
-}
-
-.b {
-	background: url("../images/letters/letter_b.png");
-}
-
-.c {
-	background-image: url("images/letter_c.png");
-}
-.d {
-	background-image: url("images/letter_d.png");
-}
-.e {
-	background: url("letters/letter_e.png");
-}
-.f {
-	background-image: url("images/letter_f.png");
-}
-.g {
-	background-image: url("images/letter_g.png");
-}
-.h {
-	background-image: url("images/letter_h.png");
-}
-.i {
-	background: url("letters/letter_i.png");
-}
-.j {
-	background-image: url("images/letter_j.png");
-}
-.k {
-	background-image: url("images/letter_k.png");
-}
-.l {
-	background-image: url("images/letter_l.png");
-}
-.m {
-	background-image: url("images/letter_m.png");
-}
-.n {
-	background-image: url("images/letter_n.png");
-}
-.o {
-	background-image: url("../images/letter_o.png");
-}
-.p {
-	background-image: url("images/letter_p.png");
-}
-.q {
-	background-image: url("images/letter_q.png");
-}
-.r {
-	background-image: url("images/letter_r.png");
-}
-.s {
-	background-image: url("images/letter_s.png");
-}
-.t {
-	background: url("letters/letter_t.png");
-}
-.u {
-	background: url("../images/letter_u.png");
-}
-.v {
-	background-image: url("images/letter_v.png");
-}
-.w {
-	background: url("letters/letter_w.png");
-}
-.x {
-	background-image: url("images/letter_x.png");
-}
-.y {
-	background-image: url("images/letter_y.png");
-}
-.z {
-	background-image: url("images/letter_z.png");
-}
+.a { background: url("letters/letter_a.png"); }
+.b { background: url("letters/letter_b.png"); }
+.c { background: url("letters/letter_c.png"); }
+.d { background: url("letters/letter_d.png"); }
+.e { background: url("letters/letter_e.png"); }
+.f { background: url("letters/letter_f.png"); }
+.g { background: url("letters/letter_g.png"); }
+.h { background: url("letters/letter_h.png"); }
+.i { background: url("letters/letter_i.png"); }
+.j { background: url("letters/letter_j.png"); }
+.k { background: url("letters/letter_k.png"); }
+.l { background: url("letters/letter_l.png"); }
+.m { background: url("letters/letter_m.png"); }
+.n { background: url("letters/letter_n.png"); }
+.o { background: url("letters/letter_o.png"); }
+.p { background: url("letters/letter_p.png"); }
+.q { background: url("letters/letter_q.png"); }
+.r { background: url("letters/letter_r.png"); }
+.s { background: url("letters/letter_s.png"); }
+.t { background: url("letters/letter_t.png"); }
+.u { background: url("letters/letter_u.png"); }
+.v { background: url("letters/letter_v.png"); }
+.w { background: url("letters/letter_w.png"); }
+.x { background: url("letters/letter_x.png"); }
+.y { background: url("letters/letter_y.png"); }
+.z { background: url("letters/letter_z.png"); }
 
 /* First line of introductory paragraph */
 .firstLine {

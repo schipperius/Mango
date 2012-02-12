@@ -1,93 +1,59 @@
-<article id="main_article" class="yui3-u-1 gutter">
+<section id="admin" class="yui3-u-1 round">
+  <p class="indent_left">Admin Options => 
+    <span><%= link_to 'Edit', edit_article_path(@article) %> |
+    </span>
+    <span><%= link_to 'Destroy', @article, 
+        confirm: 'Are you sure?', 
+        method: :delete %>
+    </span>
+  </p>
+</section>
 
-  <section id="notice"><%= notice %></section>
+<header class="article_head yui3-u-1 round">
+  <section class="article_image yui3-u-1-5 article_gutter">
+    <img>
+      <%= image_tag(@article.image_url, :size => "100x100") %>
+    <img>
+  </section>
 
-  <header id="article_heading">
-    <h1>
-      <span class="position">
-        #<%= @article.position %> <%= @article.title %>
-      </span>
-    </h1>
-    
-    <%= link_to 'Edit', edit_article_path(@article) %>
+  <section class="article_text yui3-u-3-4">
 
-    <h3>Published</h3>
-    <%= @article.published_at.strftime('%b %d, %Y') %>
-    <h3>Updated</h3>
-    <%= @article.updated_at.strftime('%b %d, %Y') %>
-  </header> <!-- end article header -->
-
-  <section id="article_intro" class="yui3-u-1">
-    <p class="first">
-      <%= @article.introduction %>
+    <p class="article_title">
+      <span class="position">#<%= @article.position %></span>
+      <span class="title"><%= @article.title %></span>
     </p>
 
-    <figure id="article_figure" class="figure">
-      <%= image_tag "ruby.png", :alt => 'Ruby' %>
-      <p class="credit">
-        <abbr class="type" title="Some Title">
-          Photograph
-        </abbr>
-          by
-        <cite>
-          <a href="" target="_blank" title="Some Title">
-            Name
-          </a>
-            <sup id="fnref:1.1" class="footnote">
-              <a href="/intro#fn:1.1">
-                1
-              </a>
-            </sup>
-              Sign on Hwy 876. Used with permission.
-        </cite>
-      </p>
-      <p class="caption">
-        <em class="title">
-          Figure 
-        </em>
-          The Barren Canadian Prairies
-      </p>
-    </figure>
-  </section> <!-- end article introduction -->
-  
-  <section id="article_desc" class="yui3-u-1">
-    <p><%= @article.description %></p>
-    <h2>Footnotes</h2>
-    <p><%= @article.footnotes %></p>
-    <p><%= @article.comments_count %></p>
-  </section> <!-- end article description -->
+    <p class="article_sub_title">
+      <span><%= @article.published_at.strftime('%b %d, %Y') %> | </span>
+      <span><%= link_to "tag 1", root_url %> | </span>
+      <span><%= link_to "tag 2", root_url %></span>
+    </p>
 
-  <nav class="yui3-g round">
-    <ul class="yui3-u-1">
-      <%= link_to "Footnotes" %> |
-      <%= link_to "Comments" %> |
-      <%= link_to "Similar Articles" %> |
-      <%= link_to "Previous Article" %> |
-      <%= link_to "Next Article" %>
-    </ul>
-  </nav>
+    <p class="article_intro yui3-u-3-4 round first">
+      <%= @article.introduction %>
+    </p>
+  </section>
+</header>
 
-  <section id="article_comments">
-    <div id="show_comments">
-      <h3>Comments</h3>
-    </div>
+<article class="yui3-u-1 round demo">
+  <div id="tabs">
+    <nav class="tab-nav">
+      <ul class="left-indent">
+        <li class="accent"><a href="#tabs-1"><%= @article.title %></a></li>
+        <li class="accent"><a href="#tabs-2">Images</a></li>	
+        <li class="accent"><a href="#tabs-3">Footnotes</a></li>
+        <li class="accent"><a href="#tabs-4">Comments</a></li>
+        <li class="accent"><a href="#tabs-5">Similar Articles</a></li>
+        <li class="accent"><a href="#tabs-6">Previous Article</a></li>
+        <li class="accent"><a href="#tabs-7">Next Article</a></li>
+      </ul>
+    </nav>
 
-    <div id="post_comments">
-      <h3>Add a Comment</h3>
-      <%= form_for([@article, @article.comments.build]) do |f| %>
-        <div class="field">
-          <%= f.label :name %><br />
-          <%= f.text_field :name %>
-        </div>
-        <div class="field">
-          <%= f.label :content %><br />
-          <%= f.text_area :content, :rows => '4' %>
-        </div>
-        <div class="actions">
-          <%= f.submit %>
-        </div>
-      <% end %>
-    </div>
-  </section> <!-- end article comments -->
-
+    <section class="article yui3-u-1 round">
+      <div id="tabs-1"><%= render 'article' %></div>
+      <div id="tabs-2"><%= render 'images' %></div>
+      <div id="tabs-3"><%= render 'footnotes' %></div>
+      <div id="tabs-4"><%= render 'comments' %></div>
+    </section>
+  </div>
 </article>

@@ -1,4 +1,6 @@
-/* Photo display styles */
+/* =============================================================================
+		Figures
+		   ========================================================================== */
 
 figure {
 	float: left;
@@ -12,7 +14,7 @@ figure {
 figure img {
 	width: 100%;
 }
-	
+
 figure p {
 	text-indent: 20px;
 }
@@ -23,11 +25,11 @@ figure .credit {
 	width: auto;
 	margin-top: 3px;
 }
-	
+
 figure .credit cite {
 	font-style: inherit;
 }
-	
+
 figure .title {
 	font-style: normal;
 	font-size: .9em;
@@ -42,7 +44,7 @@ figure .caption {
 	margin-top: 3px;
 	margin-bottom: 5px;	
 }
-	
+
 figure .title:after {
 	content: ":";
 }

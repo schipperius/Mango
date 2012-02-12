@@ -1,0 +1,235 @@
+/*** Copyright (c) 2010, Mark Schipper. All rights reserved. ***/ 
+/*
+=============================================================================
+		Site Specific Styles - order follows application layout
+
+========================================================================== */
+
+/* =============================================================================
+		Application Layout
+
+========================================================================== */
+
+html {
+	height: 100%;
+	background: #660000;
+}
+
+body #container { /* body id=container */
+	margin: auto; /* center in viewport */
+	width: 100%; /* fix page width */
+}
+
+.round { /* rounded corners */
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
+img, #logo { /* header image id=logo */
+	float: none;
+	text-align: left;
+  margin: .5em 2em 1em 2em;
+  background: #fff;
+} /* TODO: center logo */
+
+#hgroup span { /* to hide h1 and h2 in the header */
+	display: none;
+}
+
+nav ul li { /* styling navigation links */
+  display: inline;
+	list-style-type: none;
+	font-size: .9em;
+}
+
+#main-nav {
+	float: none;
+	text-align: left;
+  margin: -1em 2em 0em 2em;
+	padding: 1.5em 0em 0em 0em;
+  background: #fff;	
+}
+
+#main-nav-1 { /* pushes nav-1 up to logo */
+	float: left;
+	text-align: center;
+	margin-top: -1em;
+}
+
+#main-nav-2 {
+	text-align: center;
+	margin: -1em 0em 0em -1em;
+}
+
+#main-nav-3 {
+	float: right;
+	text-align: center;
+	margin: -1em -1.8em 0em 1.1em;
+}
+
+#content { /* styling article element for main content */
+	margin: 2em;
+}
+
+.list_brief { /* styling list of article intros */
+	float: left;
+	text-align: left;
+  margin: .5em 0em 1em 0em;
+  background: #fff;
+}
+
+.categories { /* styling categories of tags */
+	float: right;
+	text-align: left;
+	margin: .5em 0em 1em 0em ;
+	padding: .5em;
+  background: #fff;
+}
+
+footer { /* styling footer */
+	clear: both;
+	float: right;
+	text-align: right;
+	margin: 1em 2em 1em 2em;
+  background: #fff;
+}
+
+footer ul li {
+  display: inline;
+	list-style-type: none;
+}
+
+footer .right-indent {
+	margin: 0em 1em 0em 2em;
+}
+
+/* =============================================================================
+		Admin Section
+
+========================================================================== */
+
+
+/* specific styles for admin section of index and show page */
+#admin { /* only seen by admin users */
+	clear: both;
+	text-align: left;
+  margin: -1em 0em 1em 0em; /* create the correct margin, but how? */
+	padding: .5em 0em .1em 1em; /* something wrong here... */
+  background: #fff;
+	font-size: .9em;
+}
+
+/* =============================================================================
+		Index Page
+
+========================================================================== */
+
+
+/* specific styles for the index list view */
+.list_brief {
+	clear: both;
+	text-align: left;
+  margin: 0em;
+  background: #fff;
+}
+
+.list_image {
+	clear: both;
+	float: left;
+	padding: 0em;
+	margin: 2.5em 0em 0em 0em;
+}
+
+.gutter {
+	margin-right: 1em;
+}
+
+.list_text {
+	float: right;
+	padding: 1em;
+}
+
+.list_position {
+	color: #999;
+	font-size: .9em;
+}
+
+.list_title {
+	margin-top: -1em;
+	font-size: 1em;
+}
+
+.list_border { /* does not work? */
+/*	border-bottom: 2px solid #999; */
+}
+
+/* =============================================================================
+		Show page
+
+========================================================================== */
+
+.article_head {
+	clear: both;
+	text-align: left;
+	margin-bottom: 1em;
+  background: #fff;
+}
+
+.article_image {
+	float: left;
+}
+
+.article_gutter {
+	margin-right: 1em;
+}
+
+.article_text {
+}
+
+.article_title {
+	color: #999;
+	margin: 1em 0 0 0;
+}
+
+.article_sub_title {
+	color: #999;
+	font-size: .9em;	
+}
+
+.article_intro {
+	font-size: .9em;
+
+}
+
+/* =============================================================================
+		jQuery Tab
+
+========================================================================== */
+
+.tab-nav {
+	margin: 2em;
+}
+
+.article {
+	margin: 2em;
+}
+
+
+/* =============================================================================
+		Google Maps
+
+========================================================================== */
+
+div #map_canvas {
+	width: 100%;
+	height: 480px;
+	border: 1px solid #000;
+	margin: 0 1em 0 0;
+	}
+
+/* =============================================================================
+			Static Pages
+
+	========================================================================== */
+

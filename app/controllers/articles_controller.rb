@@ -10,17 +10,11 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @article = Article.new
-    end
-  end
-
-  def edit
-    @article = Article.find(params[:id])
+    @article.position = Article.maximum(:position).to_i + 1
   end
 
   def create
     @article = Article.new(params[:article])
-
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, 
@@ -35,9 +29,12 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
   def update
     @article = Article.find(params[:id])
-
     respond_to do |format|
       if @article.update_attributes(params[:article])
         format.html { redirect_to @article, 
@@ -56,3 +53,4 @@ class ArticlesController < ApplicationController
     @article.destroy
   end
 
+end

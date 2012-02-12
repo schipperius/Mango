@@ -1,46 +1,72 @@
-<article id="main" class="yui3-u-1">
+<section id="admin" class="yui3-u-1 round">
+  <p class="indent_left">Admin Options => 
+    <span><%= link_to 'Create Article', new_article_path %>
+    </span>
+  </p>
+</section>
 
-  <aside id="links">
-  <%= link_to 'New Article', new_article_path %>
-  </aside>
-  
-  <section class="yui3-u-1 round">
+<section class="list_brief yui3-u-3-4 round">
 
-    <% @articles.each do |article| %>
+  <% @articles.each do |article| %>
 
-      <h1 class="list-title link_to">
-        <%= article.title %>
-      </h1>
+  <header class="list_border">
 
-      <img class="yui3-u-1">
-        <%= image_tag(article.image_url, class: 'list_image', 
-          :size => "75x75") %>
+    <section class="list_image yui3-u-1-5">
       <img>
+        <%= image_tag(article.image_url, :size => "75x75") %>
+      <img>
+    </section>
 
-      <p class="list_introduction yui3-u-1-2">
-        <%= truncate(strip_tags(article.introduction), 
-          length: 200) %>
-        <%= link_to 'Read', article %>
+    <section class="list_text yui3-u-3-4">
+      <p class="list_position">
+        <strong>Article
+          <span>#<%= article.position %> - </span>
+        </strong>
+          <span><%= article.published_at.strftime('%b %d, %Y') %><span>
       </p>
 
-      <nav class="list_actions">
-        <ul>
-          <%= link_to 'Edit', edit_article_path(article) %>
-          <%= link_to 'Destroy', article, 
-            confirm: 'Are you sure?',
-            method: :delete %>
-        </ul>
-      </nav>
-      
-    <% end %>
-    
-    <div class="pagination yui3-u-1-2 round">
-    <%= will_paginate :previous_label => h("<< Previous Page"),  :next_label => h("Next Page >>") %>
-    </div>
+      <p class="list_title">
+        <strong>
+          <span><%= link_to article.title, article%></span>
+        </strong>
+      </p>
 
+      <p class="list_intro">
+        <%= truncate(strip_tags(article.introduction), 
+          :length => 500, :separator => ' ') %>..
+        <%= link_to 'Read More', article %>
+      </p>
+    </section>
 
+  </header>
 
+  <% end %>
+
+  <section class="pagination yui3-u-1 round">
+    <%= will_paginate :previous_label => h("<< Previous Page"), :next_label => h("Next Page >>") %>
   </section>
 
-</article>
+</section>
 
+<aside class="categories yui3-u-1-5 round">
+  <p>Types</p>
+  <ul>
+    <li>Historical</li>
+    <li>People</li>
+    <li>Tools</li>
+  </ul>
+</aside>
+
+<aside class="categories yui3-u-1-5 round">
+  <p>Categories</p>
+  <ul>
+    <li>Tools</li>
+    <li>Games</li>
+    <li>Toys</li>
+    <li>People</li>
+    <li>Fish</li>
+    <li>Plants</li>
+    <li>Garage</li>
+    <li>Kitchen</li>
+  </ul>
+</aside>

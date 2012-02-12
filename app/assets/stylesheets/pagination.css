@@ -1,21 +1,39 @@
-/* Pagination Styles */
+/* =============================================================================
+		Pagination Static and Dynamic
+  		========================================================================== */
+
+.prev-page { /* Static Pagination */
+	float: left;
+}
+
+.next-page { /* Static Pagination */
+	float: right;
+}
+
+article section section .pagination { /* don't understand this? */
+  clear: both;
+  position: relative;
+	display: inline-block;
+}
+
 .pagination {
   background: white;
   cursor: default; /* self-clearing method: */
-  margin: 1.25em 0;
-  padding: 1.25em 0;
+  margin: .2em 0;
+  padding: .2em 0;
+  text-align:center;
 }
 
 .pagination a, .pagination span, .pagination em {
-  padding: 0.2em 0.5em;
+  padding: 0.15em 0.5em;
   display: block;
   float: left;
-  margin-right: 1px;
+  /*margin-right: 1px;*/
 }
 
 .pagination .disabled {
   color: #999999;
-  border: 1px solid #dddddd;
+  /*border: 1px solid #dddddd;*/
 }
 
 .pagination .current {
@@ -23,23 +41,23 @@
   font-weight: bold;
   background: #2e6ab1;
   color: white;
-  border: 1px solid #2e6ab1;
+  /*border: 1px solid #2e6ab1;*/
 }
 
 .pagination a {
   text-decoration: none;
   color: #105cb6;
-  border: 1px solid #9aafe5; }
+  /*border: 1px solid #9aafe5; }*/
 
 .pagination a:hover, .pagination a:focus {
   color: #000033;
-  border-color: #000033;
+  /*border-color: #000033;*/
 }
 
 .pagination .page_info {
   background: #660000;
   color: white;
-  padding: 0.4em 0.6em;
+  padding: 0.4em .6em;
   width: 22em;
   margin-bottom: 0.3em;
   text-align: center;
@@ -62,13 +80,3 @@
 *:first-child + html .pagination {
   overflow: hidden;
 }
-
-
-
-		.prev-page {
-			float: left;
-		}
-
-		.next-page {
-			float: right;
-		}
