@@ -2,7 +2,7 @@
 
 // Add new JavaScript/Coffee code in separate files in this directory and they will be automatically included in the compiled file accessible from http://example.com/assets/application.js
 
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the the compiled file.
+// It's not advisable to add code directly here, but if you do, it will appear at the bottom of the the compiled file.
 
 //= require jquery
 //= require jquery-ui

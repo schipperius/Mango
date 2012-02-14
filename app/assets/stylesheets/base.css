@@ -1,15 +1,13 @@
-/*** Copyright (c) 2010, Mark Schipper. All rights reserved. ***/ 
-/*
+/* Copyright (c) 2010. Schipperius. All rights reserved.
+
 =============================================================================
-		Site Specific Styles - order follows application layout
+		Site Specific Styles - order follows HTML structure
 
 ========================================================================== */
-
 /* =============================================================================
 		Application Layout
 
 ========================================================================== */
-
 html {
 	height: 100%;
 	background: #660000;
@@ -27,8 +25,6 @@ body #container { /* body id=container */
 }
 
 img, #logo { /* header image id=logo */
-	float: none;
-	text-align: left;
   margin: .5em 2em 1em 2em;
   background: #fff;
 } /* TODO: center logo */
@@ -43,29 +39,22 @@ nav ul li { /* styling navigation links */
 	font-size: .9em;
 }
 
-#main-nav {
-	float: none;
-	text-align: left;
-  margin: -1em 2em 0em 2em;
-	padding: 1.5em 0em 0em 0em;
-  background: #fff;	
-}
-
-#main-nav-1 { /* pushes nav-1 up to logo */
-	float: left;
-	text-align: center;
-	margin-top: -1em;
+#main-nav-1 {
+	background: #fff;
+	margin: 0em 2em;
+	padding: .4em;
 }
 
 #main-nav-2 {
-	text-align: center;
-	margin: -1em 0em 0em -1em;
+  background: #fff;
+	margin: 1em 2em;
+	padding: .4em;
 }
 
 #main-nav-3 {
-	float: right;
-	text-align: center;
-	margin: -1em -1.8em 0em 1.1em;
+  background: #fff;
+	margin: 1em 2em;
+	padding: .4em;
 }
 
 #content { /* styling article element for main content */
@@ -112,10 +101,9 @@ footer .right-indent {
 
 /* specific styles for admin section of index and show page */
 #admin { /* only seen by admin users */
-	clear: both;
 	text-align: left;
-  margin: -1em 0em 1em 0em; /* create the correct margin, but how? */
-	padding: .5em 0em .1em 1em; /* something wrong here... */
+	margin: 1em 0em;
+	padding: .4em;
   background: #fff;
 	font-size: .9em;
 }
@@ -207,12 +195,13 @@ footer .right-indent {
 
 ========================================================================== */
 
-.tab-nav {
-	margin: 2em;
+.article-nav {
+	margin: 1em 2em 0em 2em;
+	padding: 1em 1em 0em 1em;
 }
 
 .article {
-	margin: 2em;
+	margin: 1em 4em 2em 4em;
 }
 
 
