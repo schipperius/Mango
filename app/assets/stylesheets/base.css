@@ -87,10 +87,11 @@ footer { /* styling footer */
 footer ul li {
   display: inline;
 	list-style-type: none;
+	font-size: .8em;
 }
 
 footer .right-indent {
-	margin: 0em 1em 0em 2em;
+	margin: 0em 1em 0em 0em;
 }
 
 /* =============================================================================
@@ -106,6 +107,28 @@ footer .right-indent {
 	padding: .4em;
   background: #fff;
 	font-size: .9em;
+}
+
+/* =============================================================================
+			Sign Up and Sign In Pages
+
+	========================================================================== */
+.sign {
+	clear: both;
+	float: left;
+	text-align: left;
+  margin: 1em 2em;
+  background: #fff;
+}
+
+.sign_up {
+	text-align: left;
+  background: #fff;
+}
+
+.sign_in {
+	text-align: left;
+  background: #fff;
 }
 
 /* =============================================================================
@@ -187,7 +210,18 @@ footer .right-indent {
 
 .article_intro {
 	font-size: .9em;
+}
 
+/* =============================================================================
+		New Article
+
+========================================================================== */
+.article_new {
+	clear: both;
+	text-align: left;
+  margin: 0em;
+	padding: 4em;
+  background: #fff;
 }
 
 /* =============================================================================
@@ -215,10 +249,86 @@ div #map_canvas {
 	height: 480px;
 	border: 1px solid #000;
 	margin: 0 1em 0 0;
-	}
+}
 
 /* =============================================================================
-			Static Pages
+			Flash Messages
 
 	========================================================================== */
+.flash_messages {
+	margin: 0em 2em;
+}
+/* =============================================================================
+				Feedback
+
+		========================================================================== */
+
+#feedback {
+  width: 680px;
+  float: left;
+}
+
+#feedback_instructions {
+  margin-left: 700px;
+  min-width: 225px;
+}
+
+#feedback_instructions li {
+  margin: 5px 0;
+}
+
+#feedback h2.bar {
+  padding: 4px 20px;
+  margin: 0;
+  font-weight: normal;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  -moz-border-radius-topright: 6px;
+  border: solid 1px #BBB;
+  border-bottom-color: #AAA;
+  background-color: #DDD;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F3F3F3), to(#BBB));
+  background: -moz-linear-gradient(top,  #F3F3F3, #BBB);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F3F3F3', endColorstr='#BBB');
+}
+
+#feedback form {
+  background-color: #EEE;
+  padding: 10px 20px;
+  border: solid 1px #BBB;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-bottomright: 5px;
+}
+
+#feedback .info {
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+#feedback label {
+  float: left;
+  width: 160px;
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 2px;
+}
+
+#feedback .actions {
+  padding-left: 170px;
+}
+
+#feedback input, #feedback textarea {
+  font-size: 14px;
+}
 

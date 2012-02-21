@@ -13,6 +13,7 @@
     <header id="banner" class="yui3-u-1 round">
 
       <section>
+
         <img id="logo" class="yui3-u-1 round">
           <%= link_to logo, root_path %>
         <img>
@@ -21,6 +22,7 @@
           <h1><span>The Book of Jack</span></h1>
           <h2><span>An entertaining exploration of all things Jack</span></h2>
         </hgroup>
+
       </section>
 
       <section id="main-nav">
@@ -28,9 +30,9 @@
         <nav id="main-nav-1" class="yui3-u-1 round">
           <ul>
             <% if mobile_device? %>
-              <li><%= link_to "Desktop", :mobile => 0 %> | </li>
+              <li><%= link_to "Desktop Site", :mobile => 0 %> | </li>
             <% else %>
-              <li><%= link_to "Mobile", :mobile => 1 %> | </li>
+              <li><%= link_to "Mobile Site", :mobile => 1 %> | </li>
             <% end %>
 
             <% if user_signed_in? %>
@@ -66,30 +68,26 @@
       </section>
 
     </header>
-
-    <% flash.each do |name, msg| %>
-      <%= content_tag(:div, raw(msg), :id => "flash_#{name}") %>
-    <% end %>
+    
+    <section class="flash_message yui3-u-1 round">
+      <% flash.each do |name, msg| %>
+        <%= content_tag(:div, raw(msg), :id => "flash_#{name}") %>
+      <% end %>
+    </section>
 
     <article role="main" id="content" class="yui3-u-1 round">
-      <%= yield()%>
+      <%= yield %>
     </article>
 
-    <footer id="footer" class="yui3-u-23-24 round">
+    <footer id="footer" class="round">
       <ul class="right-indent">
-        <small class='copyright'>
-          <li>
-            <%= link_to "Plagiarism", root_url %> |
-          </li>
-          <li>
-            Copyright &copy; <%= Date.today.year %> All rights reserved.
-          </li>
-        </small>
+        <li><%= link_to "Plagiarism", root_url %> | </li>
+        <li>&copy;<%= Date.today.year %> All rights reserved.</li>
       </ul>
     </footer>
 
     <!-- JavaScript at the bottom for fast page loading -->
-    <%= render 'layouts/javascripts' %>
+    <%= javascript_include_tag 'application' %>
 
-  </body><!--! end of #container -->
+  </body>
 </html>

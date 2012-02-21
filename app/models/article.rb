@@ -16,4 +16,12 @@ class Article < ActiveRecord::Base
     "#{title} - #{published_at}"
   end
 
+  def previous
+    self.class.where("position < ?", position).order("position desc").first
+  end
+
+  def next
+    self.class.where("position > ?", position).order("position").first
+  end
+
 end

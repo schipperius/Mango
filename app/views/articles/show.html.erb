@@ -9,6 +9,8 @@
   </p>
 </section>
 
+
+
 <header class="article_head yui3-u-1 round">
   <section class="article_image yui3-u-1-5 article_gutter">
     <img>
@@ -18,15 +20,15 @@
 
   <section class="article_text yui3-u-3-4">
 
-    <p class="article_title">
-      <span class="position">#<%= @article.position %></span>
-      <span class="title"><%= @article.title %></span>
+    <p class="article_title">#
+      <%= @article.position %>
+      <%= @article.title %>
     </p>
 
     <p class="article_sub_title">
-      <span><%= @article.published_at.strftime('%b %d, %Y') %> | </span>
-      <span><%= link_to "tag 1", root_url %> | </span>
-      <span><%= link_to "tag 2", root_url %></span>
+      <%= @article.published_at.strftime('%b %d, %Y') %> |
+      <%= link_to "tag 1", root_url %> |
+      <%= link_to "tag 2", root_url %>
     </p>
 
     <p class="article_intro yui3-u-3-4 round first">
@@ -35,7 +37,7 @@
   </section>
 </header>
 
-<article class="yui3-u-1 round demo">
+<article class="yui3-u-1 round">
   <div id="tabs">
     <nav class="article-nav">
       <ul class="left-indent">

@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    @article = Article.new
     @article.position = Article.maximum(:position).to_i + 1
   end
 

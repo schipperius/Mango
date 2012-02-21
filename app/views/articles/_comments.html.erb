@@ -1,22 +1,31 @@
 <section id="article_comments" class="yui3-u-1 round">
+
   <div id="show_comments">
-    <h3>Comments</h3>
+    <% @article.comments.each do |comment| %>
+    <div class="">
+      <%= comment.name %>
+    </div>
+
+    <div>
+      <%= comment.content %>
+    </div>
+    <% end %>
   </div>
 
   <div id="post_comments">
-    <h3>Add a Comment</h3>
     <%= form_for([@article, @article.comments.build]) do |f| %>
-      <div class="field">
-        <%= f.label :name %><br />
-        <%= f.text_field :name %>
-      </div>
-      <div class="field">
-        <%= f.label :content %><br />
-        <%= f.text_area :content, :rows => '4' %>
-      </div>
-      <div class="actions">
-        <%= f.submit %>
-      </div>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :content %><br />
+      <%= f.text_area :content, :rows => '4' %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Post Comment"%>
+    </div>
     <% end %>
   </div>
+
 </section> <!-- end article comments -->

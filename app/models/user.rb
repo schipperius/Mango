@@ -8,6 +8,4 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   before_create { generate_token(:token) }
 
-  has_many :comments
-  
 end

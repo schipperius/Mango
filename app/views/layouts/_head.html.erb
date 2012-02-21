@@ -23,7 +23,10 @@
 <%= csrf_meta_tags %>
 
 <!-- All JavaScript at the bottom, except this Modernizr build incl. Respond.js. Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects; for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ -->
-<script src="vendor/assets/javascripts/modernizr/modernizr-2.0.6.min.js"></script>
+<script type="text/javascript" src="vendor/assets/javascripts/modernizr/modernizr-2.0.6.min.js"></script>
 
+<script type="text/javascript"
+src="http://maps.googleapis.com/maps/api/js?&sensor=false">
+</script>
 
 <%= yield(:head) %>
