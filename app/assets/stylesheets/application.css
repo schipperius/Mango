@@ -3,6 +3,8 @@
 
  *= require yui-3.5.0
  *= require normalize
+ *= require jquery-ui-1.8.18.custom
+ *= require over-ride-jquery-ui
 
  *= require base
  *= require links
@@ -15,7 +17,7 @@
  *= require print
  *= require notices
 
-*= require jquery-ui-1.8.17.custom
+ *= require deck.core
 
  *= require_self
  *= require_tree .

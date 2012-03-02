@@ -5,19 +5,21 @@ Mango::Application.routes.draw do
   end
   
   resources :pages
-
+  resources :messages
+  
   devise_for :users
 
   root :to => 'articles#index'
 
   match '/about_book',  :to => 'pages#about_book'
   match '/map',         :to => 'map#map'
-  match '/contact',     :to => 'contact#contact'
+  match '/gallery',     :to => 'gallery#gallery'
+  match '/contact',     :to => 'messages#new'
 
  # routes for the static pages
   match '/front_cover',     :to => 'pages#front_cover'
   match '/preface',         :to => 'pages#preface'
-  match '/acknowledge',     :to => 'pages#acknowledge'    
+  match '/acknowledge',     :to => 'pages#acknowledge'
   match '/about_author',    :to => 'pages#about_author'
   match '/colophon',        :to => 'pages#colophon'
   match '/back_cover',      :to => 'pages#back_cover'

@@ -5,6 +5,7 @@ source 'http://rubygems.org'
   gem "devise", "~> 1.5.3"
   gem "will_paginate", "~> 3.0.3"
   gem 'RedCloth', :require => 'redcloth'
+  gem "active_attr"
   
 group :development, :test do
   gem 'rspec-rails', '2.8.1'

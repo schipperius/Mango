@@ -9,13 +9,11 @@
   </p>
 </section>
 
-
-
 <header class="article_head yui3-u-1 round">
   <section class="article_image yui3-u-1-5 article_gutter">
     <img>
       <%= image_tag(@article.image_url, :size => "100x100") %>
-    <img>
+    </img>
   </section>
 
   <section class="article_text yui3-u-3-4">
@@ -37,25 +35,21 @@
   </section>
 </header>
 
-<article class="yui3-u-1 round">
-  <div id="tabs">
-    <nav class="article-nav">
-      <ul class="left-indent">
-        <li class="accent"><a href="#tabs-1"><%= @article.title %></a></li>
-        <li class="accent"><a href="#tabs-2">Images</a></li>	
-        <li class="accent"><a href="#tabs-3">Footnotes</a></li>
-        <li class="accent"><a href="#tabs-4">Comments</a></li>
-        <li class="accent"><a href="#tabs-5">Similar Articles</a></li>
-        <li class="accent"><a href="#tabs-6">Previous Article</a></li>
-        <li class="accent"><a href="#tabs-7">Next Article</a></li>
-      </ul>
-    </nav>
+<article class="yui3-u-1 round ui-widget">
+  <section id="tabs" class="article-nav">
+    <ul class="left-indent tab-indent">
+      <li class="accent"><a href="#tabs-1"><%= @article.title %></a></li>
+      <li class="accent"><a href="#tabs-2">Images</a></li>	
+      <li class="accent"><a href="#tabs-3">Footnotes</a></li>
+      <li class="accent"><a href="#tabs-4"><%= @article.comments_count %>      Comments</a></li>
+      <li class="accent"><a href="#tabs-5">Similar Articles</a></li>
+      <li class="accent"><a href="#tabs-6">Previous Article</a></li>
+      <li class="accent"><a href="#tabs-7">Next Article</a></li>
+    </ul>
 
-    <section class="article yui3-u-1 round">
-      <div id="tabs-1"><%= render 'article' %></div>
-      <div id="tabs-2"><%= render 'images' %></div>
-      <div id="tabs-3"><%= render 'footnotes' %></div>
-      <div id="tabs-4"><%= render 'comments' %></div>
-    </section>
-  </div>
+    <div id="tabs-1"><%= @article.description %></div>
+    <div id="tabs-2"><%= render 'images' %></div>
+    <div id="tabs-3"><%= @article.footnotes %></div>
+    <div id="tabs-4"><%= render 'comments' %></div>
+  </section>
 </article>

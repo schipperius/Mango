@@ -1,0 +1,20 @@
+/* =============================================================================
+		Custom jQuery Styles
+
+========================================================================== */
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+
+.ui-corner-all {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
+.ui-widget {
+	font-size: .8em;
+	font-weight: normal;
+}

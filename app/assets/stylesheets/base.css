@@ -110,7 +110,7 @@ footer .right-indent {
 }
 
 /* =============================================================================
-			Sign Up and Sign In Pages
+		Sign Up and Sign In Pages
 
 	========================================================================== */
 .sign {
@@ -230,9 +230,10 @@ footer .right-indent {
 ========================================================================== */
 
 .article-nav {
-	margin: 1em 2em 0em 2em;
+	margin: 1em 0em 0em 0em;
 	padding: 1em 1em 0em 1em;
 }
+
 
 .article {
 	margin: 1em 4em 2em 4em;

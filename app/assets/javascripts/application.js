@@ -8,4 +8,6 @@
 //= require jquery-ui
 //= require jquery_ujs
 
+//= require map
+
 //= require_tree .
