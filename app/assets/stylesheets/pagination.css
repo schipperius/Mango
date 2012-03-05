@@ -1,82 +1,126 @@
 /* =============================================================================
 		Pagination Static and Dynamic
-  		========================================================================== */
+    	========================================================================== */
+	
+/* Twitter Bootstrap Pagination Edited*/
 
-.prev-page { /* Static Pagination */
-	float: left;
+.pagination {
+  height: @baseLineHeight * 2;
+  margin: @baseLineHeight 0;
+ }
+.pagination ul {
+  display: inline-block;
+  .ie7-inline-block();
+  margin-left: 0;
+  margin-bottom: 0;
+  .border-radius(3px);
+  .box-shadow(0 1px 2px rgba(0,0,0,.05));
+}
+.pagination li {
+    display: inline;
+  }
+.pagination a {
+  float: left;
+  padding: 0 14px;
+  line-height: (@baseLineHeight * 2) - 2;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-left-width: 0;
+}
+.pagination a:hover,
+.pagination .active a {
+  background-color: #f5f5f5;
+}
+.pagination .active a {
+  color: @grayLight;
+  cursor: default;
+}
+.pagination .disabled a,
+.pagination .disabled a:hover {
+  color: @grayLight;
+  background-color: transparent;
+  cursor: default;
+}
+.pagination li:first-child a {
+  border-left-width: 1px;
+  .border-radius(3px 0 0 3px);
+}
+.pagination li:last-child a {
+  .border-radius(0 3px 3px 0);
 }
 
-.next-page { /* Static Pagination */
-	float: right;
+// Centered
+.pagination-centered {
+  text-align: center;
+}
+.pagination-right {
+  text-align: right;
 }
 
-article section section .pagination { /* don't understand this? */
-  clear: both;
-  position: relative;
-	display: inline-block;
-}
+/* Digg style pagination for will_paginate */
 
 .pagination {
   background: white;
-  cursor: default; /* self-clearing method: */
-  margin: .2em 0;
-  padding: .2em 0;
-  text-align:center;
+  cursor: default;
+  /* self-clearing method: */ }
+  .pagination a, .pagination span, .pagination em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .pagination .disabled {
+    color: #999999;
+    border: 1px solid #dddddd; }
+  .pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #2e6ab1;
+    color: white;
+    border: 1px solid #2e6ab1; }
+  .pagination a {
+    text-decoration: none;
+    color: #105cb6;
+    border: 1px solid #9aafe5; }
+    .pagination a:hover, .pagination a:focus {
+      color: #000033;
+      border-color: #000033; }
+  .pagination .page_info {
+    background: #2e6ab1;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+    .pagination .page_info b {
+      color: #000033;
+      background: #6aa6ed;
+      padding: 0.1em 0.25em; }
+  .pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .pagination {
+    height: 1%; }
+  *:first-child + html .pagination {
+    overflow: hidden; }
+
+/* My Custom Paginate Styles */
+
+.pagination {
+	margin: .2em .2em .4em .2em;
+	padding: 0em;
+	text-align: center;
 }
 
-.pagination a, .pagination span, .pagination em {
-  padding: 0.15em 0.5em;
-  display: block;
-  float: left;
-  /*margin-right: 1px;*/
-}
-
-.pagination .disabled {
-  color: #999999;
-  /*border: 1px solid #dddddd;*/
-}
-
-.pagination .current {
-  font-style: normal;
-  font-weight: bold;
-  background: #2e6ab1;
-  color: white;
-  /*border: 1px solid #2e6ab1;*/
+.pagination ul {
+	margin-top: 0em;
+	padding: 0em;
 }
 
 .pagination a {
-  text-decoration: none;
-  color: #105cb6;
-  /*border: 1px solid #9aafe5; }*/
-
-.pagination a:hover, .pagination a:focus {
-  color: #000033;
-  /*border-color: #000033;*/
+	border: none
 }
 
-.pagination .page_info {
-  background: #660000;
-  color: white;
-  padding: 0.4em .6em;
-  width: 22em;
-  margin-bottom: 0.3em;
-  text-align: center;
-}
 
-.pagination .page_info b {
-  color: #000033;
-  background: #6aa6ed;
-  padding: 0.1em 0.25em;
-}
-
-.pagination:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden; }
-* html .pagination {
-  height: 1%; }
-*:first-child + html .pagination {
-  overflow: hidden;
-}

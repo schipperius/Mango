@@ -1,23 +1,22 @@
-<section id="admin" class="yui3-u-1 round">
+<section id="admin" class="round fluid-row">
   <p class="indent_left">Admin Options => 
     <span><%= link_to 'Create Article', new_article_path %>
     </span>
   </p>
 </section>
 
-<section class="list_brief yui3-u-3-4 round">
+<section class="list_brief round fluid-row pull-left span9">
 
   <% @articles.each do |article| %>
 
-  <header class="list_border">
-
-    <section class="list_image yui3-u-1-5">
+  <header class="fluid-row">
+    <section class="list_image thumbnail pull-left span2">
       <img>
         <%= image_tag(article.image_url, :size => "75x75") %>
       <img>
     </section>
 
-    <section class="list_text yui3-u-3-4">
+    <section class="list_text fluid-row pull-right span6">
       <p class="list_position">
         <strong>Article
           <span>#<%= article.position %> - </span>
@@ -37,36 +36,32 @@
         <%= link_to 'read more', article %>
       </p>
     </section>
-
   </header>
-
   <% end %>
-
-  <section class="pagination yui3-u-1 round">
-    <%= will_paginate :previous_label => h("<< Previous Page"), :next_label => h("Next Page >>") %>
-  </section>
-
 </section>
 
-<aside class="categories yui3-u-1-5 round">
-  <p>Types</p>
-  <ul>
-    <li>Historical</li>
-    <li>People</li>
-    <li>Tools</li>
+<section class="list_tag round pull-right span3">
+  <ul class="nav nav-list">
+    <li class="nav-header">
+      Article Types
+    </li>
+    <li class="active">
+      <a href="#"><i class="icon-book"></i>
+        Historical</a>
+    </li>
+    <li><a href="#">People</a></li>
+    <li><a href="#">Tools</a></li>
+    <li class="nav-header">Article Categories</li>
+    <li><a href="#">Tools</a></li>
+    <li><a href="#">Games</a></li>
+    <li><a href="#">Toys</a></li>
+    <li><a href="#">Peoples</a></li>
+    <li><a href="#">Fish</a></li>
+    <li><a href="#">Garage</a></li>
+    <li><a href="#">Kitchen</a></li>
   </ul>
-</aside>
+</section>
 
-<aside class="categories yui3-u-1-5 round">
-  <p>Categories</p>
-  <ul>
-    <li>Tools</li>
-    <li>Games</li>
-    <li>Toys</li>
-    <li>People</li>
-    <li>Fish</li>
-    <li>Plants</li>
-    <li>Garage</li>
-    <li>Kitchen</li>
-  </ul>
-</aside>
+<section class="list_paginate round fluid-row span9 pull-left">
+  <%= will_paginate :previous_label => h("Previous Article"), :next_label => h("Next Article") %>
+</section>

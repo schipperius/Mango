@@ -8,7 +8,7 @@ class PagesController < ApplicationController
     @title = "Preface"
   end
 
-  def Acknowledge
+  def acknowledge
     @title = "Acknowledgements"
   end
 

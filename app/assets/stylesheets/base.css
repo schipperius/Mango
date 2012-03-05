@@ -8,6 +8,7 @@
 		Application Layout
 
 ========================================================================== */
+
 html {
 	height: 100%;
 	background: #660000;
@@ -24,89 +25,85 @@ body #container { /* body id=container */
   border-radius:         10px;
 }
 
-img, #logo { /* header image id=logo */
-  margin: .5em 2em 1em 2em;
-  background: #fff;
-} /* TODO: center logo */
+header img {
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+#logo {
+	margin: 2em 0em 0em 0em;
+}
 
 #hgroup span { /* to hide h1 and h2 in the header */
 	display: none;
 }
 
-nav ul li { /* styling navigation links */
-  display: inline;
-	list-style-type: none;
-	font-size: .9em;
+#main-nav {
+	margin: 1em 0em 0em 0em;
 }
-
-#main-nav-1 {
-	background: #fff;
-	margin: 0em 2em;
-	padding: .4em;
-}
-
-#main-nav-2 {
-  background: #fff;
-	margin: 1em 2em;
-	padding: .4em;
-}
-
-#main-nav-3 {
-  background: #fff;
-	margin: 1em 2em;
-	padding: .4em;
-}
-
-#content { /* styling article element for main content */
-	margin: 2em;
-}
-
-.list_brief { /* styling list of article intros */
-	float: left;
-	text-align: left;
-  margin: .5em 0em 1em 0em;
-  background: #fff;
-}
-
-.categories { /* styling categories of tags */
-	float: right;
-	text-align: left;
-	margin: .5em 0em 1em 0em ;
-	padding: .5em;
-  background: #fff;
-}
-
-footer { /* styling footer */
-	clear: both;
-	float: right;
-	text-align: right;
-	margin: 1em 2em 1em 2em;
-  background: #fff;
-}
-
-footer ul li {
-  display: inline;
-	list-style-type: none;
-	font-size: .8em;
-}
-
-footer .right-indent {
-	margin: 0em 1em 0em 0em;
-}
-
 /* =============================================================================
 		Admin Section
 
 ========================================================================== */
 
-
-/* specific styles for admin section of index and show page */
 #admin { /* only seen by admin users */
 	text-align: left;
-	margin: 1em 0em;
+	margin: 2em 0em 0em 0em;
 	padding: .4em;
   background: #fff;
+	font-size: 1em;
+}
+
+/* =============================================================================
+		Article Index Page
+
+========================================================================== */
+
+.list_brief {
+	text-align: left;
+  margin: 2em 0em 0em 0em;
+	padding: 0em;
+  background: #fff;
+}
+
+.list_image {
+	clear: both;
+	margin: 2em 0em 0em 2em;
+	padding: 0em;
+}
+
+.list_text {
+	margin: 1em 0em 0em 0em;
+	padding: 1em 2em 1em 0em;
+}
+
+.list_position {
+	color: #999;
 	font-size: .9em;
+}
+
+.list_title {
+	margin-top: -1em;
+	font-size: 1em;
+}
+
+.list_border { /* does not work? */
+	border-bottom: 2px solid #999;
+}
+
+.list_tag { /* styling categories of tags */
+	margin: 2em 0em 0em 0em ;
+	padding: 0em;
+  background: #fff;
+}
+
+.list_paginate {
+	clear: both;
+  margin: 2em 0em 0em 0em;
+	padding: 0em;
+  background: #fff;	
 }
 
 /* =============================================================================
@@ -131,52 +128,9 @@ footer .right-indent {
   background: #fff;
 }
 
-/* =============================================================================
-		Index Page
-
-========================================================================== */
-
-
-/* specific styles for the index list view */
-.list_brief {
-	clear: both;
-	text-align: left;
-  margin: 0em;
-  background: #fff;
-}
-
-.list_image {
-	clear: both;
-	float: left;
-	padding: 0em;
-	margin: 2.5em 0em 0em 0em;
-}
-
-.gutter {
-	margin-right: 1em;
-}
-
-.list_text {
-	float: right;
-	padding: 1em;
-}
-
-.list_position {
-	color: #999;
-	font-size: .9em;
-}
-
-.list_title {
-	margin-top: -1em;
-	font-size: 1em;
-}
-
-.list_border { /* does not work? */
-/*	border-bottom: 2px solid #999; */
-}
 
 /* =============================================================================
-		Show page
+		Article Show page
 
 ========================================================================== */
 
@@ -213,14 +167,14 @@ footer .right-indent {
 }
 
 /* =============================================================================
-		New Article
+		New Article Page
 
 ========================================================================== */
 .article_new {
 	clear: both;
 	text-align: left;
   margin: 0em;
-	padding: 4em;
+	padding: 0em;
   background: #fff;
 }
 
@@ -249,7 +203,7 @@ div #map_canvas {
 	width: 100%;
 	height: 480px;
 	border: 1px solid #000;
-	margin: 0 1em 0 0;
+	margin: 0em;
 }
 
 /* =============================================================================
@@ -257,79 +211,10 @@ div #map_canvas {
 
 	========================================================================== */
 .flash_messages {
-	margin: 0em 2em;
+	margin: 0em 0em;
 }
 /* =============================================================================
 				Feedback
 
 		========================================================================== */
-
-#feedback {
-  width: 680px;
-  float: left;
-}
-
-#feedback_instructions {
-  margin-left: 700px;
-  min-width: 225px;
-}
-
-#feedback_instructions li {
-  margin: 5px 0;
-}
-
-#feedback h2.bar {
-  padding: 4px 20px;
-  margin: 0;
-  font-weight: normal;
-  color: #333;
-  font-size: 14px;
-  text-align: center;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  -webkit-border-top-left-radius: 6px;
-  -webkit-border-top-right-radius: 6px;
-  -moz-border-radius-topleft: 6px;
-  -moz-border-radius-topright: 6px;
-  border: solid 1px #BBB;
-  border-bottom-color: #AAA;
-  background-color: #DDD;
-  background: -webkit-gradient(linear, left top, left bottom, from(#F3F3F3), to(#BBB));
-  background: -moz-linear-gradient(top,  #F3F3F3, #BBB);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F3F3F3', endColorstr='#BBB');
-}
-
-#feedback form {
-  background-color: #EEE;
-  padding: 10px 20px;
-  border: solid 1px #BBB;
-  border-top: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-radius-bottomleft: 5px;
-  -moz-border-radius-bottomright: 5px;
-}
-
-#feedback .info {
-  font-size: 13px;
-  margin-bottom: 30px;
-}
-
-#feedback label {
-  float: left;
-  width: 160px;
-  text-align: right;
-  padding-right: 10px;
-  padding-top: 2px;
-}
-
-#feedback .actions {
-  padding-left: 170px;
-}
-
-#feedback input, #feedback textarea {
-  font-size: 14px;
-}
 

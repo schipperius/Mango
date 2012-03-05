@@ -12,8 +12,14 @@ Mango::Application.routes.draw do
   root :to => 'articles#index'
 
   match '/about_book',  :to => 'pages#about_book'
+  
   match '/map',         :to => 'map#map'
+  
   match '/gallery',     :to => 'gallery#gallery'
+  match '/photos',      :to => 'gallery#photos'
+  match '/videos',      :to => 'gallery#videos'
+  match '/music',       :to => 'gallery#music'
+  
   match '/contact',     :to => 'messages#new'
 
  # routes for the static pages

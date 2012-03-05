@@ -4,6 +4,7 @@ source 'http://rubygems.org'
   gem 'jquery-rails', '1.0.18'
   gem "devise", "~> 1.5.3"
   gem "will_paginate", "~> 3.0.3"
+  gem "bootstrap-will_paginate", "~> 0.0.6"
   gem 'RedCloth', :require => 'redcloth'
   gem "active_attr"
   
@@ -18,6 +19,12 @@ group :assets do
   gem 'sass-rails',   '~> 3.1.5'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
+  
+  gem "compass", "~> 0.12.rc.0"
+  gem 'compass-rails'
+  gem 'compass_twitter_bootstrap'
+  
+  gem 'twitter-bootstrap-rails'
 end
 
 group :test do

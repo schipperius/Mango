@@ -54,5 +54,9 @@ module Mango
     # Deploying Rails 3.1 on Heroku, you may want to set:
     # config.assets.initialize_on_precompile = false
     # On config/application.rb forcing your application to not access the DB or load models when precompiling your assets.
+
+    # Compass integration
+    config.sass.load_paths << Compass::Frameworks['compass'].stylesheets_directory
+    config.sass.load_paths << Compass::Frameworks['twitter_bootstrap'].stylesheets_directory
   end
 end

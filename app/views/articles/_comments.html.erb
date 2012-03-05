@@ -12,14 +12,26 @@
     <% end %>
   </div>
 
+  <div>
+    <ul class="nav">
+    <% if user_signed_in? %>
+      Signed in as <%= current_user.email %>. Not you?
+      <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+    <% else %>
+      <li><%= link_to "Sign up", new_user_registration_path %></li>
+      <li><%= link_to "Sign In", new_user_session_path %></li>
+    <% end %>
+    </ul>
+  </div>
+
   <div id="post_comments">
     <%= form_for([@article, @article.comments.build]) do |f| %>
     <div class="field">
-      <%= f.label :name %><br />
+      <%= f.label :name %>
       <%= f.text_field :name %>
     </div>
     <div class="field">
-      <%= f.label :content %><br />
+      <%= f.label :content %>
       <%= f.text_area :content, :rows => '4' %>
     </div>
     <div class="actions">

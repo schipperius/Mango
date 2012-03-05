@@ -1,10 +1,16 @@
 /* This is a manifest file that will automatically include all the stylesheets available in this directory and any sub-directories.
  * You are free to add application-wide styles to this file and they will appear at the top of the compiled file, but it's generally better to create a new file per style scope.
 
- *= require yui-3.5.0
- *= require normalize
- *= require jquery-ui-1.8.18.custom
- *= require over-ride-jquery-ui
+@import "compass";
+@import "compass_twitter_bootstrap";
+@import "compass_twitter_bootstrap_responsive"
+
+ *= require base/bootstrap_and_overrides
+ *= require base/yui-3.5.0
+ *= require base/normalize
+ *= require base/jquery-ui-1.8.18.custom
+ *= require base/jquery-ui-overrides
+ *= require base/deck.core
 
  *= require base
  *= require links
@@ -16,8 +22,6 @@
  *= require tables
  *= require print
  *= require notices
-
- *= require deck.core
 
  *= require_self
  *= require_tree .

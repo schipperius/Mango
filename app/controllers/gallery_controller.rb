@@ -4,4 +4,16 @@ class GalleryController < ApplicationController
     @title = "Gallery"
   end
 
+  def photos
+    @title = "Photos"
+  end
+
+  def videos
+    @title = "Videos"
+  end
+
+  def music
+    @title = "Music"
+  end
+
 end
