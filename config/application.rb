@@ -56,7 +56,7 @@ module Mango
     # On config/application.rb forcing your application to not access the DB or load models when precompiling your assets.
 
     # Compass integration
-    config.sass.load_paths << Compass::Frameworks['compass'].stylesheets_directory
-    config.sass.load_paths << Compass::Frameworks['twitter_bootstrap'].stylesheets_directory
+    # config.sass.load_paths << # #Compass::Frameworks['compass'].stylesheets_directory
+    #config.sass.load_paths << #Compass::Frameworks['twitter_bootstrap'].stylesheets_directory
   end
 end
