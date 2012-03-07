@@ -7,6 +7,7 @@ source 'http://rubygems.org'
   gem "bootstrap-will_paginate", "~> 0.0.6"
   gem 'RedCloth', :require => 'redcloth'
   gem "active_attr"
+  gem 'thin'
   
 group :development, :test do
   gem 'rspec-rails', '2.8.1'
