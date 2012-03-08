@@ -10,8 +10,6 @@ class CreateComments < ActiveRecord::Migration
       t.integer :position
       t.integer :user_id
 
-      t.reference :article
-
       t.timestamps
     end
 
