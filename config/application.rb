@@ -58,5 +58,6 @@ module Mango
     # While precompiling assets, in Rails 3.1.1 and up, you can prevent
     # initializing your application and connecting to the database by ensuring
     # config/application.rb:
-    config.assets.initialize_on_precompile = false  end
+    config.assets.initialize_on_precompile = false
+  end
 end
