@@ -5,7 +5,6 @@
 /* Twitter Bootstrap Pagination Edited*/
 
 .pagination {
-  height: @baseLineHeight * 2;
   margin: @baseLineHeight 0;
  }
 .pagination ul {
