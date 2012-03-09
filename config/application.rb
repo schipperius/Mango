@@ -55,8 +55,8 @@ module Mango
     # config.assets.initialize_on_precompile = false
     # On config/application.rb forcing your application to not access the DB or load models when precompiling your assets.
 
-    # Compass integration
-    # config.sass.load_paths << # #Compass::Frameworks['compass'].stylesheets_directory
-    #config.sass.load_paths << #Compass::Frameworks['twitter_bootstrap'].stylesheets_directory
-  end
+    # While precompiling assets, in Rails 3.1.1 and up, you can prevent
+    # initializing your application and connecting to the database by ensuring
+    # config/application.rb:
+    config.assets.initialize_on_precompile = false  end
 end
