@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
   gem 'rails', '3.2.2'
   gem 'jquery-rails', '2.0.0'
+  gem "rubygems-update", "~> 1.8.17"
   gem "devise", "~> 1.5.3"
   gem "will_paginate", "~> 3.0.3"
   gem 'thin'
