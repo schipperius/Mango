@@ -18,6 +18,7 @@ end
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
+  gem "psych", "~> 1.2.2"
   gem 'rspec-rails', '2.8.1'
   gem "foreman", "~> 0.40.0"
 end
