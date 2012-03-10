@@ -16,12 +16,10 @@ group :assets do
   gem 'twitter-bootstrap-rails', '~> 2.0.1.0'
 end
 
-group :development do
-  gem 'sqlite3', '1.3.5'
-end
-
 group :development, :test do
+  gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.8.1'
+  gem "foreman", "~> 0.40.0"
 end
 
 group :test do
